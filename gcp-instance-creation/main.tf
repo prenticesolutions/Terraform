@@ -11,8 +11,8 @@ provider "google" {
     zone="us-central1-c"
 }
 
-resource "google_compute_instance" "jenkins-server" {
-  name         = "jenkins-server"
+resource "google_compute_instance" "pxe-server" {
+  name         = "pxe-server"
   machine_type = "e2-medium"
 
   boot_disk {
@@ -30,6 +30,6 @@ resource "google_compute_instance" "jenkins-server" {
 }
 
 resource "google_compute_network" "vpc_network" {
-  name                    = "jenkins-server"
+  name                    = "pxe-server"
   auto_create_subnetworks = "true"
 }
