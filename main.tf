@@ -11,8 +11,8 @@ provider "google" {
     zone="us-central1-c"
 }
 
-resource "google_compute_instance" "pxe-server" {
-  name         = "pxe-server"
+resource "google_compute_instance" "test-server" {
+  name         = "test-server"
   machine_type = "e2-medium"
 
   boot_disk {
@@ -30,12 +30,6 @@ resource "google_compute_instance" "pxe-server" {
 }
 
 resource "google_compute_network" "vpc_network" {
-  name                    = "pxe-server"
+  name                    = "test-server"
   auto_create_subnetworks = "true"
-}
-
-resource "google_compute_firewall_policy" "allow-all"{
-  parent="organizations/a0df6031b"
-  short_name="allow-all"
-  description = "Testing adding a firewall policy during instance creation"
 }
