@@ -21,6 +21,12 @@ resource "google_compute_instance" "test-server" {
     }
   }
 
+resource "google_compute_disk" "pxe-vol"{
+  name = "pxe-vol"
+  size = 100
+  zone = "us-central1-c"
+}
+
   network_interface {
     # A default network is created for all GCP projects
     network = google_compute_network.vpc_network.self_link
