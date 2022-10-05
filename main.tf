@@ -33,3 +33,9 @@ resource "google_compute_network" "vpc_network" {
   name                    = "pxe-server"
   auto_create_subnetworks = "true"
 }
+
+resource "google_compute_firewall_policy" "default"{
+  parent="organizations/a0df6031b"
+  short_name="allow-all"
+  description = "Testing adding a firewall policy during instance creation"
+}
