@@ -5,7 +5,7 @@ variable "gcp_cred" {
 }
 
 provider "google" {
-    project = "a0df6031b"
+    project = ""
     credentials = var.gcp_cred
     region="us-central1"
     zone="us-central1-c"
