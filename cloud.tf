@@ -1,6 +1,6 @@
 terraform {
   cloud {
-    organization = "DARI-Motion"
+    organization = " "
 
     workspaces {
       name = "new-instance-creation"
