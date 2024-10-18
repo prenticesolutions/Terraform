@@ -21,9 +21,9 @@ resource "google_compute_instance" "test-server" {
     }
   }
 
-resource "google_compute_disk" "pxe-vol"{
-  name = "pxe-vol"
-  size = 100
+resource "google_compute_disk" "basic-vol"{
+  name = "basic-vol"
+  size = 10
   zone = "us-central1-c"
 }
 
